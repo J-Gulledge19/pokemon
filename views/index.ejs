@@ -9,10 +9,12 @@
 </head>
 <body>
     <h1>Pokedex</h1>
-    <% for(let i = 0; i < pokemon.length; i++) { %>
-        
-            <img src="<%=pokemon[i].img %>">
-    <% } %>
-
+    <div class="pokemonImg">
+        <% for(let i = 0; i < pokemon.length; i++) { %>
+            
+            <a href="/pokemon/<%=i%>">
+            <img src="<%=pokemon[i].img %>"></a>
+        <% } %>
+    </div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 img{
     max-width: 5rem;
     max-height: 5rem;
+
 }
 
 body{
@@ -11,6 +12,25 @@ body{
     background-repeat: no-repeat;
     height: 80vh;
     margin-top: 12rem;
-   
+   display: grid;
+   grid-template-columns: 1fr 2fr 1fr;
+   grid-template-rows: 50px 1fr 50px;  
 
+}
+
+.pokemonImg{
+    grid-column: 2;
+    grid-row: 2;
+    overflow-y: scroll;
+    max-width: 20rem;
+    max-height: 35rem;
+    align-items: center;
+   
+}
+ h1{
+    grid-column: 3;
+    grid-row: 1;
+ }
+::-webkit-scrollbar {
+    display: none;
 }

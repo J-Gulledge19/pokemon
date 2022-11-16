@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%=`${pokemon.name}`%></h1>
+    <img src="<%=pokemon.img %>">
+    <a href="/pokemon/:id/edit"><button>Edit</button></a>
+    <a href="/pokemon/:id"><button>delete</button></a>
+
+        <ul class="type">
+
+            <h4>Type</h4>
+
+            <li>
+                <%=`${pokemon.type}`%>
+            </li>
+        </ul>
+        <ul class="stats">
+            <h4>
+                Stats
+            </h4>
+            <li> 
+                Hp:<%=`${pokemon.stats.hp}`%>
+             </li>
+             <li> 
+                Attack:<%=`${pokemon.stats.attack}`%>
+             </li>
+             <li> 
+                Defense:<%=`${pokemon.stats.defense}`%>
+             </li>
+        </ul>
+</body>
+</html>

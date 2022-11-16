@@ -23,6 +23,15 @@ app.get('/pokemon', (req, res) => {
     );
 });
 
+
+app.get("/pokemon/:index", (req, res) => {
+
+    res.render("show.ejs", {
+      pokemon: pokemon[req.params.index],
+      index: req.params.index
+    });
+  });
+
 const PORT = process.env.PORT
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
