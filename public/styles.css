@@ -1,0 +1,16 @@
+img{
+    max-width: 5rem;
+    max-height: 5rem;
+}
+
+body{
+    background-image: url(https://i.imgur.com/WWiAJIM.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 80vh;
+    margin-top: 12rem;
+   
+
+}
