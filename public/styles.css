@@ -1,6 +1,10 @@
 img{
     max-width: 5rem;
-    max-height: 5rem;
+    max-height: 5rem; 
+    width:  100px;
+    height: 100px;
+    box-shadow: 5px 5px 2.5px rgb(1, 1, 1);
+
 
 }
 
@@ -14,7 +18,7 @@ body{
     margin-top: 12rem;
    display: grid;
    grid-template-columns: 1fr 2fr 1fr;
-   grid-template-rows: 50px 1fr 50px;  
+   grid-template-rows: 100px 1fr 100px;  
 
 }
 
@@ -25,12 +29,17 @@ body{
     max-width: 20rem;
     max-height: 35rem;
     align-items: center;
+    margin: 0%;
    
 }
  h1{
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
+    padding-left: 18rem;
+    
  }
+
+ 
 ::-webkit-scrollbar {
     display: none;
 }
