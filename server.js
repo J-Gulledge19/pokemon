@@ -70,7 +70,15 @@ app.put("/pokemon/:id", (req, res) => {
     pokemon[req.params.id] = updatedPoke
   
     res.redirect("/pokemon")
-  })
+  });
+
+  //DELETE route
+app.delete("/pokemon/:id", (req, res) => {
+   
+    pokemon.splice(req.params.id, 1);
+   
+    res.redirect("/pokemon");
+  });
 
 // Show page for rendered pokemon
 app.get("/pokemon/:index", (req, res) => {
