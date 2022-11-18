@@ -23,7 +23,30 @@ app.get('/pokemon', (req, res) => {
     );
 });
 
+//Create new pokemon route
+app.get('/pokemon/new', (req, res) => {
+    res.render('new.ejs');
+});
 
+// Post new pokemon route
+app.post("/pokemon", (req, res) => {
+    const newPokemon = {
+        name: req.body.name,
+        type: req.body.type,
+        img: req.body.img,
+        stats: {
+            hp: req.body.hp,
+            attack: req.body.attack,
+            defense: req.body.defense
+        }
+    }
+    pokemon.push(newPokemon);
+  
+    // redirect back to index page
+    res.redirect("/pokemon");
+  });
+
+// Show page for rendered pokemon
 app.get("/pokemon/:index", (req, res) => {
 
     res.render("show.ejs", {
