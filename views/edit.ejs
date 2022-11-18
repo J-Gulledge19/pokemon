@@ -8,18 +8,30 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Edit Pokemon <%= pokemon.name %></h1>
 
+    <div class="title">
+        <h1>Edit Pokemon <br>
+            <%= pokemon.name %></h1>
+    </div>
+    <div class="form">
     <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%= pokemon.name %>"/><br/>
-        Type: <input type="text" name="type" value="<%= pokemon.type %>"/><br/>
-        Image link: <input type="text" name="img" value="<%= pokemon.img %>" /><br/>
-        Stats: <br/>
-        Hp:<input type="text" name="hp" value="<%= pokemon.stats.hp %>"/><br/>
-        Attack: <input type="text" name="attack" value="<%= pokemon.stats.attack %>" /><br/>
-        Defense: <input type="text" name="defense" value="<%= pokemon.stats.defense %>"/><br/>
-        <input type="submit" value="Create"/>
+        Name: <br>
+            <input type="text" name="name" value="<%= pokemon.name %>"/><br/>
+        Type: <br>
+            <input type="text" name="type" value="<%= pokemon.type %>"/><br/>
+        Image link: <br>
+            <input type="text" name="img" value="<%= pokemon.img %>" /><br/>
+        <br><h3>Stats:</h3> 
+        Hp: <br>
+            <input type="text" name="hp" value="<%= pokemon.stats.hp %>"/><br/>
+        Attack: <br>
+            <input type="text" name="attack" value="<%= pokemon.stats.attack %>" /><br/>
+        Defense: <br>
+            <input type="text" name="defense" value="<%= pokemon.stats.defense %>"/><br/>
+            <br><input type="submit" value="Create"/>
     </form>
     <a href="/pokemon"><button>Return to Index</button></a>
+    </div>
+
 </body>
 </html>

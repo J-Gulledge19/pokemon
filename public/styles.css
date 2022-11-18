@@ -1,16 +1,32 @@
-.showpoke{
-    max-width: 400px;
-    max-height: 400px;
-}
 
 img{
     max-width: 5rem;
     max-height: 5rem; 
     width:  100px;
     height: 100px;
-    box-shadow: 5px 5px 2.5px rgb(1, 1, 1);
+    box-shadow: 5px 5px 2.5px rgb(1, 1, 1);   
+}
 
+.stats{
+    grid-column: 2;
+    grid-row: 2;
+    align-items: baseline;
+    margin-left: 18rem;
+    padding-top: 1rem;
+ }
 
+.imgshowpoke{
+    max-width: 15rem;
+    max-height: 15rem; 
+    width:  150px;
+    height: 150px;
+    box-shadow: 5px 5px 2.5px rgb(1, 1, 1); 
+    margin-top: 2rem;
+}
+
+.showpoke{
+    grid-column: 2;
+    grid-row: 2;
 }
 
 body{
@@ -21,10 +37,9 @@ body{
     background-repeat: no-repeat;
     height: 80vh;
     margin-top: 12rem;
-   display: grid;
-   grid-template-columns: 1fr 2fr 1fr;
-   grid-template-rows: 100px 1fr 100px;  
-
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 1fr 100px;     
 }
 
 .pokemonImg{
@@ -33,16 +48,23 @@ body{
     overflow-y: scroll;
     max-width: 20rem;
     max-height: 35rem;
-    align-items: center;
-   
+    align-items: center;    
 }
 
- .title{
+.title{
     grid-column: 2;
     grid-row: 1;
-    padding-left: 18rem;
-    
- }
+    padding-left: 18rem;    
+}
+
+
+ .form{
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+    margin: 8px 0;
+}
+
 
  @media only screen 
 and (min-width : 1224px) {
@@ -62,9 +84,21 @@ and (min-width : 1224px) {
     .title{
         grid-column: 2;
         grid-row: 1;
-        padding-left: 38rem;
-        
+        margin-left: 20rem;  
+             
      }
+
+    .stats{
+        margin-left: 30rem;
+    }
+
+    .showpoke{
+        margin-left: 15rem;
+    }
+
+    .form{
+        margin-left: 20rem;
+    }
  }
  
 ::-webkit-scrollbar {
