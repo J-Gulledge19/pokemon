@@ -44,7 +44,33 @@ app.post("/pokemon", (req, res) => {
   
     // redirect back to index page
     res.redirect("/pokemon");
-  });
+});
+
+// edit route
+app.get("/pokemon/:id/edit", (req, res) => {
+    
+    res.render("edit.ejs", {
+      pokemon: pokemon[req.params.id],
+      index: req.params.id
+    })
+    
+});
+  
+app.put("/pokemon/:id", (req, res) => {
+    const updatedPoke = {
+        name: req.body.name,
+        type: req.body.type,
+        img: req.body.img,
+        stats: {
+            hp: req.body.hp,
+            attack: req.body.attack,
+            defense: req.body.defense
+        }
+    }
+    pokemon[req.params.id] = updatedPoke
+  
+    res.redirect("/pokemon")
+  })
 
 // Show page for rendered pokemon
 app.get("/pokemon/:index", (req, res) => {
